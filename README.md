@@ -9,7 +9,7 @@
 
 ## Background
 
-JavaScript libraries often published to [npm registry](https://npmjs.com) use [semantic versioniong](https://semver.org/) for versioning their releases.
+JavaScript libraries often published to [npm registry](https://npmjs.com) use [semantic versioning](https://semver.org/) for versioning their releases.
 
 Semantic versioning allows indicating changes in 3 different types:
 
