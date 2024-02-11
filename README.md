@@ -95,7 +95,7 @@ When a framework adds integration to another framework or tool that supports com
 
 Frameworks shall still allow end-users to also configure the compatibility for of those sub-dependencies to allow opting in faster without waiting on the release cycle chain.
 
-## Recommandations
+## Recommendations
 
 End-users should prefer `compatibility_date` over `compatibility_flags` to have a more predictable behavior expected from the framework.
 
@@ -109,7 +109,7 @@ It must be noted that even with the possibility of compatibility flags framework
 
 To allow better compatibility with different naming conventions, both kebab_case (`compatibility_date`, `compatibility_flags`) and camelCase (`compatibilityDate`, `compatibilityFlags`) shall be supported as aliases for user config.
 
-## Implementsation
+## Implementation
 
 Implementation details of this proposal like where and how to store the persisted configuration per project or how to define and apply compatibility flags and dates are up to the framework authors.
 
@@ -121,7 +121,7 @@ This proposal does not solves every issue in the NPM ecosystem that is mentioned
 
 For most libraries, maintainers have to still be committed and more careful about introducing changes that are likely to break higher levels of behavior. Low-level libraries should be designed to minimize the chance of API and behavior change possibilities and expose smaller utils that can be gradually replaced with new ones once an upgrade is required.
 
-We at [unjs](https://unjs.io), are committed to making up to these standards when making low-level tools and packages to reduce number of breaking changes and fragmenetation in the ecosystem that could be caused by major version upgrades.
+We at [unjs](https://unjs.io), are committed to making up to these standards when making low-level tools and packages to reduce number of breaking changes and fragmentation in the ecosystem that could be caused by major version upgrades.
 
 The main goal of this proposal is to help the higher-level libraries and mainly meta-frameworks such as [Nitro](https://nitro.unjs.io) and [Nuxt](https://nuxt.com) that are directly used by end-users and can often provide a better experience by handling internal behavior themselves but also we encourage every Major meta-framework to consider adopting this or an approach.
 
