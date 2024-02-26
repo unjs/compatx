@@ -62,7 +62,7 @@ const compatFlags = defineCompatibilityFlags({
 If enabled, returns `true`, if disabled, returns `false` and if not specified, returns `undefined`.
 
 ```js
-import { isCompatFlagEnabled } from "compat flags";
+import { isCompatFlagEnabled } from "compat-flags";
 
 // Loaded from user or integration config
 const compatSpec = { date: "2020/1/1", flags: ["build_cache"] };
