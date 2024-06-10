@@ -27,8 +27,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2(eslint@9.4.0)(typescript@5.4.5)
       jiti:
-        specifier: ^1.21.3
-        version: 1.21.3
+        specifier: ^1.21.6
+        version: 1.21.6
       prettier:
         specifier: ^3.3.1
         version: 3.3.1
@@ -1533,8 +1533,8 @@ packages:
     resolution: {integrity: sha512-BewmUXImeuRk2YY0PVbxgKAysvhRPUQE0h5QRM++nVWyubKGV0l8qQ5op8+B2DOmwSe63Jivj0BjkPQVf8fP5g==}
     engines: {node: '>=8'}
 
-  jiti@1.21.3:
-    resolution: {integrity: sha512-uy2bNX5zQ+tESe+TiC7ilGRz8AtRGmnJH55NC5S0nSUjvvvM2hJHmefHErugGXN4pNv4Qx7vLsnNw9qJ9mtIsw==}
+  jiti@1.21.6:
+    resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
 
   js-tokens@4.0.0:
@@ -3260,7 +3260,7 @@ snapshots:
       defu: 6.1.4
       dotenv: 16.4.5
       giget: 1.2.3
-      jiti: 1.21.3
+      jiti: 1.21.6
       mlly: 1.7.1
       ohash: 1.1.3
       pathe: 1.1.2
@@ -4011,7 +4011,7 @@ snapshots:
       html-escaper: 2.0.2
       istanbul-lib-report: 3.0.1
 
-  jiti@1.21.3: {}
+  jiti@1.21.6: {}
 
   js-tokens@4.0.0: {}
 
@@ -4177,7 +4177,7 @@ snapshots:
       esbuild: 0.20.2
       fs-extra: 11.2.0
       globby: 14.0.1
-      jiti: 1.21.3
+      jiti: 1.21.6
       mlly: 1.7.1
       mri: 1.2.0
       pathe: 1.1.2
@@ -4780,7 +4780,7 @@ snapshots:
       esbuild: 0.19.12
       globby: 13.2.2
       hookable: 5.5.3
-      jiti: 1.21.3
+      jiti: 1.21.6
       magic-string: 0.30.10
       mkdist: 1.5.1(typescript@5.4.5)
       mlly: 1.7.1
@@ -4816,7 +4816,7 @@ snapshots:
       '@babel/standalone': 7.24.7
       '@babel/types': 7.24.7
       defu: 6.1.4
-      jiti: 1.21.3
+      jiti: 1.21.6
       mri: 1.2.0
       scule: 1.3.0
     transitivePeerDependencies:
