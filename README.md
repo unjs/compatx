@@ -49,10 +49,9 @@ Format a date to a `YYYY-MM-DD` string
 formatDateString(new Date("2021/01/01")) // "2021-01-01"
 ```
 
-### `getCompatibilityDiff`
+### `getCompatibilityChanges(updates, date1, date2)`
 
-- **Type**: `undefined`
-- **Default**: `undefined`
+Get compatibility changes between two dates.
 
 ### `getCompatibilityUpdates(updates, date)`
 
