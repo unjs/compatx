@@ -5,8 +5,8 @@ import type { PlatformCompatibilityDate, PlatformName } from "./platforms";
  * Get compatibility updates applicable for the user given platform and date range.
  */
 export function getCompatibilityUpdates(
-  compatibilityDate: PlatformCompatibilityDate,
   allUpdates: CompatibilityUpdates,
+  compatibilityDate: PlatformCompatibilityDate,
 ): CompatibilityUpdates {
   const _date =
     typeof compatibilityDate === "string"
@@ -36,8 +36,8 @@ export function getCompatibilityChanges(
   compatibilityDate1: PlatformCompatibilityDate,
   compatibilityDate2: PlatformCompatibilityDate,
 ): { added: CompatibilityUpdates; removed: CompatibilityUpdates } {
-  const updates1 = getCompatibilityUpdates(compatibilityDate1, allUpdates);
-  const updates2 = getCompatibilityUpdates(compatibilityDate2, allUpdates);
+  const updates1 = getCompatibilityUpdates(allUpdates, compatibilityDate1);
+  const updates2 = getCompatibilityUpdates(allUpdates, compatibilityDate2);
   const added = updates2.filter((update) => !updates1.includes(update));
   const removed = updates1.filter((update) => !updates2.includes(update));
   return {

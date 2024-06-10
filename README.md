@@ -53,7 +53,7 @@ formatDateString(new Date("2021/01/01")) // "2021-01-01"
 
 Get compatibility changes between two dates.
 
-### `getCompatibilityUpdates(compatibilityDate, allUpdates)`
+### `getCompatibilityUpdates(allUpdates, compatibilityDate)`
 
 Get compatibility updates applicable for the user given platform and date range.
 
