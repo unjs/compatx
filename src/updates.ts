@@ -1,6 +1,6 @@
 import {
   resolveCompatibilityDates,
-  type CompatibilityDate,
+  type CompatibilityDateSpec,
   type DateString,
 } from "./date";
 import type { PlatformName } from "./platforms";
@@ -10,7 +10,7 @@ import type { PlatformName } from "./platforms";
  */
 export function getCompatibilityUpdates(
   allUpdates: CompatibilityUpdates,
-  compatibilityDate: CompatibilityDate,
+  compatibilityDate: CompatibilityDateSpec,
 ): CompatibilityUpdates {
   const _date = resolveCompatibilityDates(compatibilityDate);
 
@@ -34,8 +34,8 @@ export function getCompatibilityUpdates(
  */
 export function getCompatibilityChanges(
   allUpdates: CompatibilityUpdates,
-  compatibilityDate1: CompatibilityDate,
-  compatibilityDate2: CompatibilityDate,
+  compatibilityDate1: CompatibilityDateSpec,
+  compatibilityDate2: CompatibilityDateSpec,
 ): { added: CompatibilityUpdates; removed: CompatibilityUpdates } {
   const updates1 = getCompatibilityUpdates(allUpdates, compatibilityDate1);
   const updates2 = getCompatibilityUpdates(allUpdates, compatibilityDate2);
