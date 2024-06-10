@@ -20,7 +20,7 @@ export type PlatformCompatibilityDates = {
    * Default compatibility date for all unspecified platforms (required)
    */
   default: DateString;
-} & Record<PlatformName, DateString>;
+} & Partial<Record<PlatformName, DateString>>;
 
 /**
  * Last known compatibility date for the used platform
