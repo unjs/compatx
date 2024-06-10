@@ -62,6 +62,10 @@ formatDateString(new Date("2021/01/01")); // "2021-01-01"
 import type {
   // Typed date string in `YYYY-MM-DD` format
   DateString,
+  // Platform compatibility dates
+  PlatformName,
+  PlatformCompatibilityDate,
+  PlatformCompatibilityDates,
 } from "./types";
 ```
 
