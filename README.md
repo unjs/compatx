@@ -62,11 +62,11 @@ Get compatibility updates applicable for the user given platform and date range.
 - **Type**: `array`
 - **Default**: `["aws","azure","cloudflare","deno","firebase","netlify","vercel"]`
 
-### `resolveCompatibilityDates(input, defaults?)`
+### `resolveCompatibilityDates(input?, defaults?)`
 
 Normalize the compatibility dates from input config and defaults.
 
-### `resolveCompatibilityDatesFromEnv(input)`
+### `resolveCompatibilityDatesFromEnv(overridesInput?)`
 
 Resolve compatibility dates with environment variables as defaults.
 
@@ -83,7 +83,7 @@ import type {
   // Platform names
   PlatformName,
   // Compatibility dates
-  CompatibilityDate,
+  CompatibilityDateSpec,
   CompatibilityDates,
   // Compatibility updates
   CompatibilityUpdate,

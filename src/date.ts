@@ -4,14 +4,14 @@ import { platforms, type PlatformName } from "./platforms";
  * Normalize the compatibility dates from input config and defaults.
  */
 export function resolveCompatibilityDates(
-  input: CompatibilityDate,
-  defaults?: Partial<CompatibilityDates>,
+  input?: CompatibilityDateSpec | undefined,
+  defaults?: CompatibilityDateSpec,
 ): CompatibilityDates {
   // Initialize with default values
   const dates: CompatibilityDates = { ...(defaults as CompatibilityDates) };
 
   // Add normalized input values
-  const _input = typeof input === "string" ? { default: input } : input;
+  const _input = typeof input === "string" ? { default: input } : input || {};
   for (const [key, value] of Object.entries(_input)) {
     if (value) {
       dates[key as PlatformName] = formatDate(value);
@@ -31,7 +31,9 @@ export function resolveCompatibilityDates(
  *
  * Environment variable name format is `COMPATIBILITY_DATE` for default and `COMPATIBILITY_DATE_<PLATFORM>` for specific platforms.
  */
-export function resolveCompatibilityDatesFromEnv(input: CompatibilityDate) {
+export function resolveCompatibilityDatesFromEnv(
+  overridesInput?: CompatibilityDateSpec | undefined,
+) {
   const defaults: Partial<CompatibilityDates> = {
     default: process.env.COMPATIBILITY_DATE
       ? formatDate(process.env.COMPATIBILITY_DATE)
@@ -44,7 +46,7 @@ export function resolveCompatibilityDatesFromEnv(input: CompatibilityDate) {
       defaults[platform] = formatDate(env);
     }
   }
-  return resolveCompatibilityDates(input, defaults);
+  return resolveCompatibilityDates(overridesInput, defaults);
 }
 
 /**
@@ -103,4 +105,4 @@ export type CompatibilityDates = {
 /**
  * Last known compatibility date for the used platform
  */
-export type CompatibilityDate = DateString | CompatibilityDates;
+export type CompatibilityDateSpec = DateString | Partial<CompatibilityDates>;

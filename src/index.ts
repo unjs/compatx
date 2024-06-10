@@ -1,5 +1,9 @@
 // Date
-export type { DateString, CompatibilityDate, CompatibilityDates } from "./date";
+export type {
+  DateString,
+  CompatibilityDateSpec,
+  CompatibilityDates,
+} from "./date";
 export {
   formatDate,
   resolveCompatibilityDates,
