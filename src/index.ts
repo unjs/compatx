@@ -1,13 +1,10 @@
 // Date
-export type { DateString } from "./date";
+export type { DateString, CompatibilityDate, CompatibilityDates } from "./date";
 export { formatDateString } from "./date";
 
 // Platforms
-export type {
-  PlatformCompatibilityDate,
-  PlatformCompatibilityDates,
-  PlatformName,
-} from "./platforms";
+export type { PlatformName } from "./platforms";
+export { platforms } from "./platforms";
 
 // Updates
 export type { CompatibilityUpdate, CompatibilityUpdates } from "./updates";

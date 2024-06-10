@@ -46,7 +46,7 @@ Format a date to a `YYYY-MM-DD` string
 **Example:**
 
 ```ts
-formatDateString(new Date("2021/01/01")) // "2021-01-01"
+formatDateString(new Date("2021/01/01")); // "2021-01-01"
 ```
 
 ### `getCompatibilityChanges(allUpdates, compatibilityDate1, compatibilityDate2)`
@@ -65,11 +65,12 @@ Get compatibility updates applicable for the user given platform and date range.
 import type {
   // Typed date string in `YYYY-MM-DD` format
   DateString,
-  // Platform compatibility dates
+  // Platform names
   PlatformName,
-  PlatformCompatibilityDate,
-  PlatformCompatibilityDates,
-  // Platform compatibility updates
+  // Compatibility dates
+  CompatibilityDate,
+  CompatibilityDates,
+  // Compatibility updates
   CompatibilityUpdate,
   CompatibilityUpdates
 } from "./types";

@@ -1,12 +1,12 @@
-import type { DateString } from "./date";
-import type { PlatformCompatibilityDate, PlatformName } from "./platforms";
+import type { CompatibilityDate, DateString } from "./date";
+import type { PlatformName } from "./platforms";
 
 /**
  * Get compatibility updates applicable for the user given platform and date range.
  */
 export function getCompatibilityUpdates(
   allUpdates: CompatibilityUpdates,
-  compatibilityDate: PlatformCompatibilityDate,
+  compatibilityDate: CompatibilityDate,
 ): CompatibilityUpdates {
   const _date =
     typeof compatibilityDate === "string"
@@ -33,8 +33,8 @@ export function getCompatibilityUpdates(
  */
 export function getCompatibilityChanges(
   allUpdates: CompatibilityUpdates,
-  compatibilityDate1: PlatformCompatibilityDate,
-  compatibilityDate2: PlatformCompatibilityDate,
+  compatibilityDate1: CompatibilityDate,
+  compatibilityDate2: CompatibilityDate,
 ): { added: CompatibilityUpdates; removed: CompatibilityUpdates } {
   const updates1 = getCompatibilityUpdates(allUpdates, compatibilityDate1);
   const updates2 = getCompatibilityUpdates(allUpdates, compatibilityDate2);

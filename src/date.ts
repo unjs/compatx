@@ -1,3 +1,5 @@
+import type { PlatformName } from "./platforms";
+
 /**
  * Format a date to a `YYYY-MM-DD` string
  *
@@ -35,3 +37,24 @@ type Day = `${"0" | "1" | "2" | "3"}${number}`;
 export type DateString = `${Year}-${Month}-${Day}`;
 
 export type DateValue = Date | DateString;
+
+/**
+ * Last known compatibility dates for platforms
+ *
+ * @example
+ * {
+ *  "default": "2024-01-01",
+ *  "cloudflare": "2024-03-01",
+ * }
+ */
+export type CompatibilityDates = {
+  /**
+   * Default compatibility date for all unspecified platforms (required)
+   */
+  default: DateString;
+} & Partial<Record<PlatformName, DateString>>;
+
+/**
+ * Last known compatibility date for the used platform
+ */
+export type CompatibilityDate = DateString | CompatibilityDates;
