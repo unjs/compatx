@@ -39,11 +39,6 @@ bun install -D compatx
 
 <!-- automd:jsdocs src="./src/index.ts" -->
 
-### `diffDays`
-
-- **Type**: `undefined`
-- **Default**: `undefined`
-
 ### `formatDateString(date)`
 
 Format a date to a `YYYY-MM-DD` string
@@ -51,7 +46,7 @@ Format a date to a `YYYY-MM-DD` string
 **Example:**
 
 ```ts
-formatDateString(new Date("2021/01/01")); // "2021-01-01"
+formatDateString(new Date("2021/01/01")) // "2021-01-01"
 ```
 
 <!-- /automd -->
