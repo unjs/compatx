@@ -1,6 +1,6 @@
 {
   "name": "compatx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "🌴 Gradual feature flags.",
   "repository": "unjs/compatx",
   "license": "MIT",

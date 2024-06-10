@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v0.1.2
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.1...v0.1.2)
+
+### 🚀 Enhancements
+
+- Compatibility date resolve utils ([5bb66ae](https://github.com/unjs/compatx/commit/5bb66ae))
+
+### 💅 Refactors
+
+- Simplify platform and date ([38080d7](https://github.com/unjs/compatx/commit/38080d7))
+
+### 🏡 Chore
+
+- Update test ([4d7a861](https://github.com/unjs/compatx/commit/4d7a861))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.1
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.0...v0.1.1)
