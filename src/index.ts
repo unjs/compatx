@@ -1,3 +1,3 @@
-export * from "./check";
-export * from "./date";
-export * from "./types";
+export type { DateString } from "./date";
+
+export { formatDateString } from "./date";
