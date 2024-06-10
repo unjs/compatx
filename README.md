@@ -49,11 +49,11 @@ Format a date to a `YYYY-MM-DD` string
 formatDateString(new Date("2021/01/01")) // "2021-01-01"
 ```
 
-### `getCompatibilityChanges(updates, date1, date2)`
+### `getCompatibilityChanges(allUpdates, compatibilityDate1, compatibilityDate2)`
 
 Get compatibility changes between two dates.
 
-### `getCompatibilityUpdates(updates, date)`
+### `getCompatibilityUpdates(compatibilityDate, allUpdates)`
 
 Get compatibility updates applicable for the user given platform and date range.
 
