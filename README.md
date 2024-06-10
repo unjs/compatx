@@ -49,6 +49,15 @@ Format a date to a `YYYY-MM-DD` string
 formatDateString(new Date("2021/01/01")) // "2021-01-01"
 ```
 
+### `getCompatibilityDiff`
+
+- **Type**: `undefined`
+- **Default**: `undefined`
+
+### `getCompatibilityUpdates(updates, date)`
+
+Get compatibility updates applicable for the user given platform and date range.
+
 <!-- /automd -->
 
 ## Types
@@ -61,6 +70,9 @@ import type {
   PlatformName,
   PlatformCompatibilityDate,
   PlatformCompatibilityDates,
+  // Platform compatibility updates
+  CompatibilityUpdate,
+  CompatibilityUpdates
 } from "./types";
 ```
 
