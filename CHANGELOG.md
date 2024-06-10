@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.1.3
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.2...v0.1.3)
+
+### 💅 Refactors
+
+- Make compat date types better ([ebd54a5](https://github.com/unjs/compatx/commit/ebd54a5))
+
+### 🏡 Chore
+
+- Update import ([8c6b7eb](https://github.com/unjs/compatx/commit/8c6b7eb))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.2
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.1...v0.1.2)
