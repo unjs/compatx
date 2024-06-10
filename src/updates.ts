@@ -1,4 +1,8 @@
-import type { CompatibilityDate, DateString } from "./date";
+import {
+  resolveCompatibilityDates,
+  type CompatibilityDate,
+  type DateString,
+} from "./date";
 import type { PlatformName } from "./platforms";
 
 /**
@@ -8,10 +12,7 @@ export function getCompatibilityUpdates(
   allUpdates: CompatibilityUpdates,
   compatibilityDate: CompatibilityDate,
 ): CompatibilityUpdates {
-  const _date =
-    typeof compatibilityDate === "string"
-      ? { default: compatibilityDate }
-      : compatibilityDate;
+  const _date = resolveCompatibilityDates(compatibilityDate);
 
   return allUpdates.filter((change) => {
     const _platformDate = _date[change.platform] || _date.default;

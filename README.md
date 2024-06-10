@@ -39,14 +39,14 @@ bun install -D compatx
 
 <!-- automd:jsdocs src="./src/index.ts" -->
 
-### `formatDateString(date)`
+### `formatDate(date)`
 
 Format a date to a `YYYY-MM-DD` string
 
 **Example:**
 
 ```ts
-formatDateString(new Date("2021/01/01")); // "2021-01-01"
+formatDateString(new Date("2021/01/01")) // "2021-01-01"
 ```
 
 ### `getCompatibilityChanges(allUpdates, compatibilityDate1, compatibilityDate2)`
@@ -56,6 +56,21 @@ Get compatibility changes between two dates.
 ### `getCompatibilityUpdates(allUpdates, compatibilityDate)`
 
 Get compatibility updates applicable for the user given platform and date range.
+
+### `platforms`
+
+- **Type**: `array`
+- **Default**: `["aws","azure","cloudflare","deno","firebase","netlify","vercel"]`
+
+### `resolveCompatibilityDates(input, defaults?)`
+
+Normalize the compatibility dates from input config and defaults.
+
+### `resolveCompatibilityDatesFromEnv(input)`
+
+Resolve compatibility dates with environment variables as defaults.
+
+Environment variable name format is `COMPATIBILITY_DATE` for default and `COMPATIBILITY_DATE_<PLATFORM>` for specific platforms.
 
 <!-- /automd -->
 

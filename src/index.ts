@@ -1,6 +1,10 @@
 // Date
 export type { DateString, CompatibilityDate, CompatibilityDates } from "./date";
-export { formatDateString } from "./date";
+export {
+  formatDate,
+  resolveCompatibilityDates,
+  resolveCompatibilityDatesFromEnv,
+} from "./date";
 
 // Platforms
 export type { PlatformName } from "./platforms";
