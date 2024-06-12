@@ -31,6 +31,11 @@ describe("date utils", () => {
         expected: { default: "2021-01-01" },
       },
       {
+        input: { cloudflare: "2022-01-01" },
+        defaults: "2021-01-01",
+        expected: { cloudflare: "2022-01-01", default: "2021-01-01" },
+      },
+      {
         input: "2021-01-x",
         defaults: undefined,
         expected: { default: "" },

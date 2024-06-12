@@ -8,7 +8,9 @@ export function resolveCompatibilityDates(
   defaults?: CompatibilityDateSpec,
 ): CompatibilityDates {
   // Initialize with defaults object
-  const dates: CompatibilityDates = { ...(defaults as CompatibilityDates) };
+  const dates = {
+    ...(typeof defaults === "string" ? { default: defaults } : defaults),
+  } as CompatibilityDates;
 
   // Normalize default date
   dates.default = formatDate(dates.default || "");
