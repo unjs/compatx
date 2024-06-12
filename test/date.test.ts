@@ -36,6 +36,15 @@ describe("date utils", () => {
         expected: { cloudflare: "2022-01-01", default: "2021-01-01" },
       },
       {
+        input: { cloudflare: "2022-01-01", vercel: "2022-01-02" },
+        defaults: "",
+        expected: {
+          cloudflare: "2022-01-01",
+          vercel: "2022-01-02",
+          default: "2022-01-02",
+        },
+      },
+      {
         input: "2021-01-x",
         defaults: undefined,
         expected: { default: "" },
