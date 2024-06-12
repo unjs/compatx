@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.5
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.4...v0.1.5)
+
+### 🩹 Fixes
+
+- Always normalize `default` date ([aaf7e4a](https://github.com/unjs/compatx/commit/aaf7e4a))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.4
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.3...v0.1.4)
