@@ -39,6 +39,10 @@ bun install -D compatx
 
 <!-- automd:jsdocs src="./src/index.ts" -->
 
+### `formatCompatibilityDate(input)`
+
+Format compatibility date spec to a string
+
 ### `formatDate(date)`
 
 Format a date to a `YYYY-MM-DD` string

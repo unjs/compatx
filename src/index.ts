@@ -8,6 +8,7 @@ export {
   formatDate,
   resolveCompatibilityDates,
   resolveCompatibilityDatesFromEnv,
+  formatCompatibilityDate,
 } from "./date";
 
 // Platforms

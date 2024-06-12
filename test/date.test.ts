@@ -1,5 +1,9 @@
 import { expect, it, describe } from "vitest";
-import { formatDate, resolveCompatibilityDates } from "../src/date";
+import {
+  formatDate,
+  resolveCompatibilityDates,
+  formatCompatibilityDate,
+} from "../src/date";
 import type {
   DateString,
   CompatibilityDateSpec,
@@ -62,6 +66,26 @@ describe("date utils", () => {
     for (const { input, defaults, expected } of cases) {
       it(`should resolve ${input} to ${JSON.stringify(expected)}`, () => {
         expect(resolveCompatibilityDates(input, defaults)).toEqual(expected);
+      });
+    }
+  });
+
+  describe("formatCompatibilityDate", () => {
+    const cases = [
+      ["2021-01-01", "2021-01-01"],
+      [{ cloudflare: "2022-01-01" }, "2022-01-01"],
+      [
+        {
+          default: "2024-01-01",
+          cloudflare: "2022-01-01",
+          vercel: "2022-01-2",
+        },
+        "2024-01-01, cloudflare: 2022-01-01, vercel: 2022-01-02",
+      ],
+    ] as [CompatibilityDateSpec, string][];
+    for (const [input, formatted] of cases) {
+      it(`should format ${JSON.stringify(input)} to ${formatted}`, () => {
+        expect(formatCompatibilityDate(input)).toBe(formatted);
       });
     }
   });

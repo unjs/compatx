@@ -60,6 +60,26 @@ export function resolveCompatibilityDatesFromEnv(
 }
 
 /**
+ * Format compatibility date spec to a string
+ */
+export function formatCompatibilityDate(input: CompatibilityDateSpec) {
+  const dates = resolveCompatibilityDates(input);
+  const entries = Object.entries(dates);
+  if (entries.length === 0) {
+    return "-";
+  }
+  return [
+    `${dates["default"]}`,
+    ...Object.entries(dates)
+      .filter(
+        ([key, value]) =>
+          key !== "default" && value && value !== dates["default"],
+      )
+      .map(([key, value]) => `${key}: ${value}`),
+  ].join(", ");
+}
+
+/**
  * Format a date to a `YYYY-MM-DD` string
  *
  * @example
