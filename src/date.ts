@@ -20,7 +20,7 @@ export function resolveCompatibilityDates(
 
   // Ensure default date is set
   if (!dates.default) {
-    dates.default = formatDate(new Date());
+    dates.default = "";
   }
 
   return dates;
@@ -83,8 +83,10 @@ type Day = `${"0" | "1" | "2" | "3"}${number}`;
 
 /**
  * Typed date string in `YYYY-MM-DD` format
+ *
+ * Empty string is used to represent an unspecified date.
  */
-export type DateString = `${Year}-${Month}-${Day}`;
+export type DateString = "" | `${Year}-${Month}-${Day}`;
 
 /**
  * Last known compatibility dates for platforms
