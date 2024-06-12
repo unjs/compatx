@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.8
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.7...v0.1.8)
+
+### 🚀 Enhancements
+
+- FormatCompatibilityDate utility ([130f038](https://github.com/unjs/compatx/commit/130f038))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.7
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.6...v0.1.7)
