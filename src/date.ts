@@ -9,11 +9,17 @@ export function resolveCompatibilityDates(
 ): CompatibilityDates {
   // Initialize with defaults object
   const dates = {
-    ...(typeof defaults === "string" ? { default: defaults } : defaults),
+    default: "",
   } as CompatibilityDates;
 
-  // Normalize default date
-  dates.default = formatDate(dates.default || "");
+  // Add normalized defaults
+  const _defaults =
+    typeof defaults === "string" ? { default: defaults } : defaults || {};
+  for (const [key, value] of Object.entries(_defaults)) {
+    if (value) {
+      dates[key as PlatformName] = formatDate(value);
+    }
+  }
 
   // Add normalized input values
   const _input = typeof input === "string" ? { default: input } : input || {};
@@ -22,6 +28,10 @@ export function resolveCompatibilityDates(
       dates[key as PlatformName] = formatDate(value);
     }
   }
+
+  // Normalize default date
+  dates.default =
+    formatDate(dates.default || "") || Object.values(dates).sort().pop() || "";
 
   return dates;
 }
