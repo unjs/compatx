@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.7
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.6...v0.1.7)
+
+### 🚀 Enhancements
+
+- Infer latest specified compat date as default ([#13](https://github.com/unjs/compatx/pull/13))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.6
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.5...v0.1.6)
