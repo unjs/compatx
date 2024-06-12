@@ -7,8 +7,11 @@ export function resolveCompatibilityDates(
   input?: CompatibilityDateSpec | undefined,
   defaults?: CompatibilityDateSpec,
 ): CompatibilityDates {
-  // Initialize with default values
+  // Initialize with defaults object
   const dates: CompatibilityDates = { ...(defaults as CompatibilityDates) };
+
+  // Normalize default date
+  dates.default = formatDate(dates.default || "");
 
   // Add normalized input values
   const _input = typeof input === "string" ? { default: input } : input || {};
@@ -16,11 +19,6 @@ export function resolveCompatibilityDates(
     if (value) {
       dates[key as PlatformName] = formatDate(value);
     }
-  }
-
-  // Ensure default date is set
-  if (!dates.default) {
-    dates.default = "";
   }
 
   return dates;
@@ -60,6 +58,9 @@ export function resolveCompatibilityDatesFromEnv(
  */
 export function formatDate(date: string | Date): DateString {
   const d = normalizeDate(date);
+  if (Number.isNaN(d.getDate())) {
+    return "";
+  }
   const year = d.getFullYear().toString();
   const month = (d.getMonth() + 1).toString().padStart(2, "0");
   const day = d.getDate().toString().padStart(2, "0");
