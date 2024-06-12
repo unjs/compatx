@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.6
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.5...v0.1.6)
+
+### 🩹 Fixes
+
+- Normalize default if is string ([9526a1d](https://github.com/unjs/compatx/commit/9526a1d))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.5
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.4...v0.1.5)
