@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.1.4
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.3...v0.1.4)
+
+### 🚀 Enhancements
+
+- Use empty string as unspecified date ([#12](https://github.com/unjs/compatx/pull/12))
+
+### 🏡 Chore
+
+- Update deps ([c941d61](https://github.com/unjs/compatx/commit/c941d61))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.1.3
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.2...v0.1.3)
