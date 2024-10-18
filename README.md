@@ -3,7 +3,7 @@
 <!-- automd:badges -->
 
 [![npm version](https://img.shields.io/npm/v/compatx)](https://npmjs.com/package/compatx)
-[![npm downloads](https://img.shields.io/npm/dm/compatx)](https://npmjs.com/package/compatx)
+[![npm downloads](https://img.shields.io/npm/dm/compatx)](https://npm.chart.dev/compatx)
 
 <!-- /automd -->
 
@@ -31,6 +31,9 @@ pnpm install -D compatx
 
 # bun
 bun install -D compatx
+
+# deno
+deno install --dev compatx
 ```
 
 <!-- /automd -->
