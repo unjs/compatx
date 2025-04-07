@@ -14,4 +14,4 @@ export const platforms = [
 /**
  * Known platform name
  */
-export type PlatformName = (typeof platforms)[number];
+export type PlatformName = (typeof platforms)[number] | (string & {});
