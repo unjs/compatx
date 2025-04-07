@@ -19,6 +19,7 @@ describe("date utils", () => {
       [new Date("2021/01/01"), "2021-01-01"],
       [new Date("2021/01/01").toString(), "2021-01-01"],
       [new Date("x").toString(), ""],
+      ["latest", new Date().toISOString().split("T")[0] as DateString],
     ] as [Date | string, DateString][];
     for (const [date, formattedDate] of cases) {
       it(`should format ${date} to ${formattedDate}`, () => {

@@ -88,7 +88,7 @@ export function formatCompatibilityDate(input: CompatibilityDateSpec) {
  * formatDateString(new Date("2021/01/01")) // "2021-01-01"
  * ```
  */
-export function formatDate(date: string | Date): DateString {
+export function formatDate(date: Date | string): DateString {
   const d = normalizeDate(date);
   if (Number.isNaN(d.getDate())) {
     return "";
@@ -105,6 +105,9 @@ function normalizeDate(date: Date | string): Date {
   if (date instanceof Date) {
     return date;
   }
+  if (date === "latest") {
+    return new Date();
+  }
   return new Date(date);
 }
 
@@ -117,9 +120,11 @@ type Day = `${"0" | "1" | "2" | "3"}${number}`;
 /**
  * Typed date string in `YYYY-MM-DD` format
  *
- * Empty string is used to represent an unspecified date.
+ * Empty string is used to represent an "unspecified" date.
+ *
+ * "latest" is used to represent the latest date available (date of today).
  */
-export type DateString = "" | `${Year}-${Month}-${Day}`;
+export type DateString = "" | "latest" | `${Year}-${Month}-${Day}`;
 
 /**
  * Last known compatibility dates for platforms

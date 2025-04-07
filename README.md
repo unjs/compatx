@@ -53,8 +53,10 @@ Format a date to a `YYYY-MM-DD` string
 **Example:**
 
 ```ts
-formatDateString(new Date("2021/01/01")) // "2021-01-01"
+formatDateString(new Date("2021/01/01")); // "2021-01-01"
 ```
+
+**Note:** Passing `"latest"` resolves to the datye of today.
 
 ### `getCompatibilityChanges(allUpdates, compatibilityDate1, compatibilityDate2)`
 
