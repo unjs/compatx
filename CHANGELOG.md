@@ -1,6 +1,37 @@
 # Changelog
 
 
+## v0.2.0
+
+[compare changes](https://github.com/unjs/compatx/compare/v0.1.8...v0.2.0)
+
+### 🚀 Enhancements
+
+- Support `"latest"` date as today ([807e856](https://github.com/unjs/compatx/commit/807e856))
+- Allow extended platform names ([0a38e34](https://github.com/unjs/compatx/commit/0a38e34))
+
+### 📦 Build
+
+- ⚠️  Esm-only dist ([8e1b1ee](https://github.com/unjs/compatx/commit/8e1b1ee))
+
+### 🏡 Chore
+
+- Update deps ([1fbae25](https://github.com/unjs/compatx/commit/1fbae25))
+- Apply automated updates ([461d8c3](https://github.com/unjs/compatx/commit/461d8c3))
+- Apply automated updates ([b572bc8](https://github.com/unjs/compatx/commit/b572bc8))
+
+### 🤖 CI
+
+- Always update corepack ([6a8f6ad](https://github.com/unjs/compatx/commit/6a8f6ad))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Esm-only dist ([8e1b1ee](https://github.com/unjs/compatx/commit/8e1b1ee))
+
+### ❤️ Contributors
+
+- Pooya Parsa ([@pi0](https://github.com/pi0))
+
 ## v0.1.8
 
 [compare changes](https://github.com/unjs/compatx/compare/v0.1.7...v0.1.8)
