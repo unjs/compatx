@@ -27,17 +27,17 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitest/coverage-v8": "^3.1.1",
+    "@types/node": "^22.17.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "automd": "^0.4.0",
-    "changelogen": "^0.6.1",
-    "eslint": "^9.24.0",
-    "eslint-config-unjs": "^0.4.2",
-    "jiti": "^2.4.2",
-    "prettier": "^3.5.3",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.32.0",
+    "eslint-config-unjs": "^0.5.0",
+    "jiti": "^2.5.1",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3",
-    "unbuild": "^3.5.0",
-    "vitest": "^3.1.1"
+    "unbuild": "^3.6.0",
+    "vitest": "^3.2.4"
   },
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.13.1"
 }
