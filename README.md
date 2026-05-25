@@ -27,13 +27,13 @@ npm install -D compatx
 yarn add -D compatx
 
 # pnpm
-pnpm install -D compatx
+pnpm add -D compatx
 
 # bun
 bun install -D compatx
 
 # deno
-deno install --dev compatx
+deno install --dev npm:compatx
 ```
 
 <!-- /automd -->
