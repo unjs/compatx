@@ -106,7 +106,14 @@ function normalizeDate(date: Date | string): Date {
     return date;
   }
   if (date === "latest") {
-    return new Date();
+    // Platforms compare compatibility dates with the current UTC date
+    const now = new Date();
+    return new Date(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  }
+  // `new Date("YYYY-MM-DD")` is UTC midnight, but `formatDate` reads the local date
+  const [, year, month, day] = date.match(/^(\d{4})-(\d{2})-(\d{2})$/) || [];
+  if (year) {
+    return new Date(+year, +month - 1, +day);
   }
   return new Date(date);
 }
