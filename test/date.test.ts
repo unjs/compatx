@@ -1,4 +1,4 @@
-import { expect, it, describe } from "vitest";
+import { expect, it, describe, afterEach, vi } from "vitest";
 import {
   formatDate,
   resolveCompatibilityDates,
@@ -89,5 +89,31 @@ describe("date utils", () => {
         expect(formatCompatibilityDate(input)).toBe(formatted);
       });
     }
+  });
+
+  describe("time zones", () => {
+    const tz = process.env.TZ;
+    afterEach(() => {
+      if (tz === undefined) {
+        delete process.env.TZ;
+      } else {
+        process.env.TZ = tz;
+      }
+      vi.useRealTimers();
+    });
+
+    it("keeps YYYY-MM-DD dates west of UTC", () => {
+      process.env.TZ = "America/New_York";
+      expect(formatDate("2026-11-01")).toBe("2026-11-01");
+      expect(resolveCompatibilityDates("2026-11-01")).toEqual({
+        default: "2026-11-01",
+      });
+    });
+
+    it("resolves latest to the UTC date east of UTC", () => {
+      process.env.TZ = "Europe/Madrid";
+      vi.useFakeTimers({ now: new Date("2026-11-01T23:30:00Z") });
+      expect(formatDate("latest")).toBe("2026-11-01");
+    });
   });
 });
